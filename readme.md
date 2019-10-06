@@ -2,9 +2,15 @@
  Step 1 - create/ use an application that writes out 'Hello World'
 
 #
- Step 2 - Dockerise the application: - creat a Dockerfile in the app's root directory FROM node:alpine --> alpine for small apps ( < 5mb) WORKDIR /usr/src/app --> create app directory COPY package*.json ./ --> install app dependencies RUN npm install --> COPY . . --> boundle app source (from root to WORKDIR in docker image) EXPOSE 3005 --> CMD ["npm", "start"] --> command to run ( npm start = node app.js in cli)
-
+ Step 2 - Dockerise the application: - creat a Dockerfile in the app's root directory  
+FROM node:alpine --> alpine for small apps ( < 5mb)
+WORKDIR /usr/src/app --> create app directory 
+COPY package*.json ./ --> install app dependencies 
+RUN npm install --> all dependencies will be downloaded in the Docker image
+COPY . . --> boundle app source (from root to WORKDIR in docker image) 
+EXPOSE 3005 --> CMD ["npm", "start"] --> command to run ( npm start = node app.js in cli)
 #
+
  Step 3 - Create Docker image: - docker build -t NAMEOFTHEIMAGE . --> build the image( docker image ls/ docker images will show NAMEOFTHEIMAGE) - you can check if the images works by typing to the cli 'docker run -d -p PORT on YOUR computer:EXPOSED port(from Dockerfile) NAMEOFTHEIMAGE --> go to localhost:PORT on YOUR computer and see the magic!
 
 #
