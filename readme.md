@@ -41,7 +41,7 @@ Step 2
 Create a Jenkinsfile with the docker hub credentials as seen in this file  
 (https://medium.com/@gustavo.guss/jenkins-building-docker-image-and-sending-to-registry-64b84ea45ee9)  
 My only difference is that I didn't use any :$BUILD_NUMBER -> server was misbehaving!!  
-Added deploy to AWS  stage to Jenkinsfile -> withAWS(region: your-chosen-region, credentials: create a new credential with your aws acces ID and secret access key)  and run a script NAMETHESCRIPT.sh
+Added deploy to AWS  stage to Jenkinsfile -> withAWS(region: your-chosen-region, credentials: create a new credential with your aws acces ID and secret access key in Jenkskins)  and run a script NAMETHESCRIPT.sh
   
 Step 3  
 Create a .sh file -> aws s3 cp ./Dockerrun.aws.json \ -> copy your file to   
