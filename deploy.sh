@@ -1,4 +1,4 @@
-aws s3 cp./Dockerrun.aws.json \
+aws s3 cp ./Dockerrun.aws.json \
   s3://elasticbeanstalk-eu-west-2-124429370407/hiDockerAgain/Dockerrun.aws.json
 
 aws elasticbeanstalk create-application-version \
