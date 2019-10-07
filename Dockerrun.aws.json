@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "heshrian/helloworld:latest"
+      "Name": "heshrian/helloworld"
     },
     "Ports": [
       {
