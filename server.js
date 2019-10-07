@@ -6,7 +6,7 @@ const PORT = 3333;
 const app = express();
 
 app.get('/', (req, res) => {
-	res.sendFile('/views/index.html', {root: __dirname})
+	res.sendFile('/views/index.html', { root: __dirname });
 });
 
 app.listen(PORT, () => {
