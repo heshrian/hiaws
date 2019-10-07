@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "heshrian/helloworld:latest"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 3333,
+        "HostPort": 3333
+      }
+    ]
+  }
