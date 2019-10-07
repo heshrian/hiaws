@@ -37,6 +37,13 @@ pipeline {
                 sh "docker rmi $registry:$BUILD_NUMBER"
             }
         }
+        stage('Deploy to AWS'){
+            steps {
+                withAWS(region:'eu-west-2',credentials:'awsebcred'){
+                    sh 'sh ./deploy.sh'
+                }
+            }
+        }
     }
 }
 
