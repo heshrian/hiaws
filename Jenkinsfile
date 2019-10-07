@@ -19,7 +19,7 @@ pipeline {
         stage('Building image') {
             steps{
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = docker.build registry
                     }
                 }	
             }
@@ -30,11 +30,6 @@ pipeline {
                         dockerImage.push()
                     }
                 }
-            }
-        }
-        stage('Remove unused docker image'){
-            steps{
-                sh "docker rmi $registry:$BUILD_NUMBER"
             }
         }
         stage('Deploy to AWS'){
