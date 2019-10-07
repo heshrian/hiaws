@@ -32,11 +32,7 @@ pipeline {
                 }
             }
         }
-        stage('Remove unused docker image'){
-            steps{
-                sh "docker rmi $registry:$BUILD_NUMBER"
-            }
-        }
+
         stage('Deploy to AWS'){
                 when{
                     branch 'master'
