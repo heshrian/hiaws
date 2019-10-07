@@ -31,7 +31,7 @@ Step 4
 Step 5 Profit
 #
 ---
-# Deploying to AWS  
+# 4 steps on how to update your image on AWS for master branch merge  
   
 Step 1  
 Create a Dockerrun.aws.json file -> "AWSEBDockerrunVersion": "1", 1 for single image 2 for docker-compose  
