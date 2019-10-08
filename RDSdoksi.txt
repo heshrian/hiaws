@@ -1,0 +1,11 @@
+follow the aws documentation on how to start an RDS service  
+if you need to install mysql on terminal follow this link:  
+https://vitux.com/how-to-install-and-configure-mysql-in-ubuntu-18-04-lts/  
+add your IP so you can access it from your IP:  
+https://medium.com/simplebackups/allow-a-remote-ip-to-connect-to-your-amazon-rds-mysql-instance-2d5074d601eb  
+
+Add a previously made dump.sql to your new database:  
+mysql -u USERNAME -p -h RDS-ENDPOINT -D databasename < dump.sql  
+
+Create a dump.sql:  
+shell> mysqldump -u USERNAME -p --databases db1 db2 db3 > dump.sql
