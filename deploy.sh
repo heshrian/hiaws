@@ -3,7 +3,7 @@ aws s3 cp ./Dockerrun.aws.json \
 
 aws elasticbeanstalk create-application-version \
   --application-name "hiDockerAgain" \
-  --version-label hiDockerAgain \
+  --version-label hiDockerAgain-$BUILD_ID \
   --source-bundle S3Bucket="elasticbeanstalk-eu-west-2-124429370407",S3Key="hiDockerAgain/Dockerrun.aws.json" \
   --auto-create-application
 
